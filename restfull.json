@@ -1,0 +1,45 @@
+{
+    "repoName": "repo-name",
+    "repoDescription": "desc",
+    "framework": "sails",
+    "database": "mongo",
+    "schemas": [
+        {
+            "name": "item",
+            "attributes": [
+                {
+                    "key": "key",
+                    "type": "string",
+                    "autoIncrement": false,
+                    "unique": false,
+                    "primaryKey": false,
+                    "required": true,
+                    "collection": false
+                },
+                {
+                    "key": "key2",
+                    "type": "string",
+                    "autoIncrement": false,
+                    "unique": false,
+                    "primaryKey": true,
+                    "required": false,
+                    "collection": false
+                }
+            ]
+        },
+        {
+            "name": "item2",
+            "attributes": [
+                {
+                    "key": "key",
+                    "autoIncrement": false,
+                    "unique": false,
+                    "primaryKey": false,
+                    "required": true,
+                    "collection": false,
+                    "model": "item"
+                }
+            ]
+        }
+    ]
+}
